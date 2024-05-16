@@ -11,8 +11,9 @@ import { from } from 'rxjs';
 export class AppComponent {
   characters: Character[] = [];
   pageNumber: number = 1;
+  static characters: { name: string; aliases: string[]; culture: string; books: string[]; }[];
 
-  constructor(private characterService: CharacterService) {}
+  constructor(private characterService: CharacterService) { }
 
   ngOnInit(): void {
     this.fetchCharacters();

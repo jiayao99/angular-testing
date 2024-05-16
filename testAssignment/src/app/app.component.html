@@ -6,7 +6,9 @@
       {{ character.name ? character.name : character.aliases[0] }}
     </div>
     <div class="culture"><strong>culture </strong> {{ character.culture }}</div>
-    <div class="booksno"><strong>Number of Books: </strong> {{ character.books.length }}</div>
+    <div class="booksno">
+      <strong>Number of Books: </strong> {{ character.books.length }}
+    </div>
   </div>
   <button (click)="handleClick()">Load More Characters</button>
   <div>Next page: {{ pageNumber }}</div>
